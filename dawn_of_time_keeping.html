@@ -247,7 +247,7 @@
       <p>The <a href="https://paulian-calendar.netlify.app/">Paulian Calendar</a> is built using a combination of scriptural guidelines and modern astronomical calculations. This section outlines the methods employed for defining days, weeks, months, and years within the calendar.</p>
 
       <h3>3.1 Data Retrieval</h3>
-      <p>Astronomical data are retrieved from JPL's DE441 ephemeris using the Skyfield library. DE441 provides high-precision positions of solar system bodies over an extended period, from -13,200 to +17,191 years. Calculations are performed for London, UK, in the UTC time zone.</p>
+      <p>Astronomical data are retrieved from JPL's DE441 ephemeris using the Skyfield library. DE441 provides high-precision positions of solar system bodies over an extended period, from -13,200 to +17,191 years. Calculations are performed for Jerusalem, Israel, in the local time zone.</p>
 
       <h3>3.2 Days</h3>
       <p>In accordance with Genesis 1:5, which declares, “And God called the light Day, and the darkness He called Night. And the evening and the morning were the first day,” a Biblical day begins at sunset and concludes at the following sunset. To honor this divine order, sunset timings are calculated daily using the Skyfield library, ensuring precise determinations based on astronomical ephemeris data.</p>
@@ -262,7 +262,7 @@
         <li><strong>Yallop's q Criterion:</strong> This method calculates a parameter q based on the geocentric difference in altitude between the Sun and Moon and the topocentric width of the lunar crescent. Visibility categories are: q ≥ 0.400 (very easily visible), 0.160 ≤ q < 0.400 (easily visible), -0.014 ≤ q < 0.160 (visible under perfect conditions), -0.160 ≤ q < -0.014 (optical aid may be needed), q < -0.160 (not visible).</li>
         <li><strong>Odeh's Criterion:</strong> This uses the topocentric arc of vision and crescent width, based on 737 observations, predicting visibility for naked eye and optical aid, with a Danjon limit of 6.4 degrees.</li>
       </ul>
-      <p>The month begins when the crescent is predicted to be visible from UTC time zone by both criterion. Months are capped to 30 days if the crescent moon is not found and next day is declared as start of the month.</p>
+      <p>The month begins when the crescent is predicted to be visible from Jerusalem local time zone by both criterion. Months are capped to 30 days, and the start of the month is only considered if the 'q' is in very easily visible category, if the crescent moon is not found, next day is declared as start of the month.</p>
 
       <h3>3.5 Years</h3>
       <h4>3.5.1 Biblical Foundations for the New Year</h4>
@@ -585,8 +585,8 @@
   <figcaption style="text-align: center;">Figure 1: Month-on-month q parameter trends (33 AD – 2100 AD)</figcaption>
   </figure><br/>
       
-      <p>The box plot analysis of the parameter "q" across months from 33 AD to 2100 AD reveals notable variation. The early months, particularly 1 and 2, display the widest spread of "q" values, reaching up to 2.5, with extreme high outliers, indicating high variability. The 7th month shows a narrow IQR with a median around 0, suggesting stability and a neutral central tendency with no significant outliers. In contrast, the 8th and 9th months have medians below 0, indicating a consistent negative "q" value, with limited variability and no prominent outliers. Months 9 and 10 exhibit a more consistent range with fewer extreme values compared to the early months.</p>
-      <p>Additionally, the early months (Jan to May) demonstrate a higher probability of visibility compared to the later months (7-9), likely due to the elevated and more variable "q" values. The shift to negative "q" values in months 8 and 9, with the 7th month remaining near 0, suggests that visibility conditions may be more favorable at the beginning of the year, while later months tend to have lower and more stable "q" values, potentially reducing visibility.</p>
+      <p>The box plot analysis of the parameter "q" across months from 33 AD to 2100 AD reveals notable variation. Parameter q peaks in months 1-5 (1.0-1.5), with widest spread. Drops in months 7-9 (0.5-1.0), showing least variation. Month 6 transitions with moderate range. Outliers indicate rare extremes below 0.4 and above 1.5.</p>
+      <p>Additionally, the early months (Jan to May) demonstrate a higher probability of visibility compared to the later months (7-9), likely due to the elevated and more variable "q" values. The shift from very easily visible category of "q" values in months 8 and 9, suggests that visibility conditions may be more favorable at the beginning of the year, while later months tend to have lower and more stable "q" values, potentially reducing visibility.</p>
       <p>Qualitative insights from box plot analysis of crescent visibility indicate variability in observation difficulty. In some months, the crescent moon is challenging to see, as evidenced in:</p>
       <div class="bible-verse">
         And David said unto Jonathan, Behold, tomorrow is the new moon, and I should not fail to sit with the king at meat: but let me go, that I may hide myself in the field unto the third day at evening.<br />
@@ -662,7 +662,7 @@
     <tr>
         <td>2006</td>
         <td>March 29</td>
-        <td>March 31</td>
+        <td>March 30</td>
         <td>March 28</td>
         <td>March 31</td>
         <td>Yes</td>
@@ -686,7 +686,7 @@
     <tr>
         <td>2009</td>
         <td>March 26</td>
-        <td>March 27</td>
+        <td>March 28</td>
         <td>March 26</td>
         <td>March 28</td>
         <td>Yes</td>
@@ -694,7 +694,7 @@
     <tr>
         <td>2010</td>
         <td>April 14</td>
-        <td>April 15</td>
+        <td>April 16</td>
         <td>March 12</td>
         <td>March 18</td>
         <td>Yes</td>
@@ -702,7 +702,7 @@
     <tr>
         <td>2011</td>
         <td>April 3</td>
-        <td>April 4</td>
+        <td>April 5</td>
         <td>March 30</td>
         <td>April 5</td>
         <td>Yes</td>
@@ -710,7 +710,7 @@
     <tr>
         <td>2012</td>
         <td>March 22</td>
-        <td>March 23</td>
+        <td>March 24</td>
         <td>March 22</td>
         <td>March 24</td>
         <td>Yes</td>
@@ -718,7 +718,7 @@
     <tr>
         <td>2013</td>
         <td>April 10</td>
-        <td>April 11</td>
+        <td>April 12</td>
         <td>March 11</td>
         <td>March 14</td>
         <td>Yes</td>
@@ -742,13 +742,13 @@
     <tr>
         <td>2016</td>
         <td>April 7</td>
-        <td>April 8</td>
+        <td>April 9</td>
         <td>March 27</td>
         <td>April 10</td>
         <td>Yes</td>
     </tr>
 </table>
-      <p>However, these Paulian Calendar dates differ from the new moon(first crescent moon) dates listed in Strashny’s study by 1 or 2 days (likely due to timezone difference).</p>
+      <p>However, these Paulian Calendar dates differ from the new moon(first crescent moon) dates listed in Strashny’s study by 1 or 2 days (likely due to local weather conditions or hebrew day mapped to the next day time, since a hebrew day is from evening to evening by Starshy).</p>
       
       <table>
         <caption>Table 4: Metonic Cycle Dates Aligned to March 18–27 over 33 AD to 2100 AD</caption>
@@ -759,7 +759,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>0033-03-18, 0052-03-18, 0071-03-19, 0090-03-19, 0109-03-19, 0128-03-19, 0147-03-20, 0166-03-19, 0185-03-19, 0204-03-20, 0223-03-21, 0242-03-20, 0261-03-20, 0280-03-19, 0299-03-20, 0318-03-21, 0337-03-21, 0356-03-20, 0375-03-21, 0394-03-20, 0413-03-20, 0432-03-20, 0451-03-21, 0470-03-21, 0489-03-20, 0508-03-21, 0527-03-21, 0546-03-21, 0565-03-21, 0584-03-21, 0603-03-23, 0622-03-22, 0641-03-22, 0660-03-21, 0679-03-22, 0698-03-22, 0717-03-23, 0736-03-23, 0755-03-23, 0774-03-22, 0793-03-22, 0812-03-22, 0831-03-23, 0850-03-23, 0869-03-22, 0888-03-22, 0907-03-23, 0926-03-23, 0945-03-23, 0964-03-22, 0983-03-23, 1002-03-24, 1021-03-23, 1040-03-23, 1059-03-24, 1078-03-23, 1097-03-23, 1116-03-24, 1135-03-24, 1154-03-24, 1173-03-24, 1192-03-23, 1211-03-24, 1230-03-24, 1249-03-24, 1268-03-23, 1287-03-24, 1306-03-24, 1325-03-24, 1344-03-24, 1363-03-25, 1382-03-25, 1401-03-25, 1420-03-25, 1439-03-25, 1458-03-25, 1477-03-25, 1496-03-25, 1515-03-27, 1534-03-26, 1553-03-25, 1572-03-25, 1591-03-26, 1610-03-26, 1629-03-26, 1648-03-26, 1667-03-26, 1686-03-25, 1705-03-26, 1724-03-26, 1743-03-27, 1762-03-27, 1781-03-26, 1800-03-26, 1819-03-27, 1838-03-27, 1857-03-27, 1876-03-27, 1895-03-27, 1914-03-28, 1933-03-27, 1952-03-27, 1971-03-28, 1990-03-28, 2009-03-27, 2028-03-27, 2047-03-27, 2066-03-27, 2085-03-27</td>
+            <td>0033-03-18, 0052-03-19, 0071-03-20, 0090-03-19, 0109-03-20, 0128-03-19, 0147-03-19, 0166-03-19, 0185-03-19, 0204-03-20, 0223-03-21, 0242-03-20, 0261-03-20, 0280-03-19, 0299-03-20, 0318-03-21, 0337-03-21, 0356-03-21, 0375-03-21, 0394-03-20, 0413-03-20, 0432-03-20, 0451-03-21, 0470-03-21, 0489-03-21, 0508-03-21, 0527-03-21, 0546-03-21, 0565-03-21, 0584-03-21, 0603-03-23, 0622-03-22, 0641-03-22, 0660-03-21, 0679-03-22, 0698-03-22, 0717-03-23, 0736-03-23, 0755-03-23, 0774-03-22, 0793-03-22, 0812-03-22, 0831-03-23, 0850-03-23, 0869-03-23, 0888-03-22, 0907-03-23, 0926-03-23, 0945-03-23, 0964-03-23, 0983-03-24, 1002-03-24, 1021-03-24, 1040-03-23, 1059-03-24, 1078-03-24, 1097-03-24, 1116-03-24, 1135-03-25, 1154-03-24, 1173-03-24, 1192-03-23, 1211-03-24, 1230-03-25, 1249-03-24, 1268-03-24, 1287-03-24, 1306-03-25, 1325-03-24, 1344-03-24, 1363-03-25, 1382-03-25, 1401-03-26, 1420-03-25, 1439-03-25, 1458-03-25, 1477-03-25, 1496-03-25, 1515-03-27, 1534-03-26, 1553-03-26, 1572-03-25, 1591-03-26, 1610-03-26, 1629-03-26, 1648-03-26, 1667-03-26, 1686-03-25, 1705-03-26, 1724-03-26, 1743-03-27, 1762-03-27, 1781-03-26, 1800-03-27, 1819-03-27, 1838-03-27, 1857-03-27, 1876-03-27, 1895-03-28, 1914-03-28, 1933-03-27, 1952-03-27, 1971-03-28, 1990-03-28, 2009-03-28, 2028-03-27, 2047-03-28, 2066-03-27, 2085-03-27</td>
           </tr>
         </tbody>
       </table>
@@ -811,7 +811,7 @@
           </tr>
         </tbody>
       </table>
-      <p>The calendar’s epoch, set at 33 AD, aligns with the crucifixion of Jesus, reinforcing its Christ-centered purpose. This choice distinguishes it from calendars like Michael Rood’s, which uses the creation as its starting point, or CHC Publications, which adopts a different crucifixion date. The <a href="https://paulian-calendar.netlify.app/">Paulian Calendar</a>’s intercalation rule—adding a 13th month if the 12th ends before March 18— seeks to ensure festivals remain in their appointed seasons, mentioning the drift seen in lunar calendars. This rule, grounded in the equilux and barley ripening, reflects historical practices noted by Josephus and the Talmud, while leveraging modern data for precision.</p>
+      <p>The calendar’s epoch, set at 33 AD, aligns with the crucifixion of Jesus, reinforcing its Christ-centered purpose. This choice distinguishes it from calendars like Michael Rood’s, which uses the creation as its starting point, or CHC Publications, which adopts a different crucifixion date. The <a href="https://paulian-calendar.netlify.app/">Paulian Calendar</a>’s intercalation rule is grounded in the equilux and barley ripening, reflects historical practices noted by Josephus and the Talmud, while leveraging modern data for precision.</p>
       <p>The following table compares the <a href="https://paulian-calendar.netlify.app/">Paulian Calendar</a> with other Biblical and Hebrew calendars, highlighting key differences in methodology and focus:</p>
       <table>
         <caption>Table 6: Comparison of Calendars</caption>
@@ -830,7 +830,7 @@
             <td>Paulian Calendar</td>
             <td>33 AD (Crucifixion)</td>
             <td>New moon crescent (Yallop/Odeh)</td>
-            <td>Barley Aviv, post-equilux (March 18)</td>
+            <td>Barley Aviv, post-equilux</td>
             <td>Barley-based and heavenly signs</td>
             <td>Christ-centered, prophetic timeline (seeks strict constraint on Passover falling after Spring begins and Barley in Aviv based on data)</td>
           </tr>
@@ -876,7 +876,7 @@
           </tr>
         </tbody>
       </table>
-      <p>Limitations include reliance on UTC timezone, for calculations. Future work could incorporate multi-location crescent observations. Additionally, while the 19-year Metonic cycle provides long-term stability, minor drift (1 day per 231 years) suggests expected drift in lunar based calendars. The calendar’s predictive model, based on astronomical ephemerides, could be further refined with real-time observational data or AI-driven predictions.</p>
+      <p>Limitations include reliance on Yallop’s q and Odeh’s for calculations. Future work could incorporate multi-location crescent observations. Additionally, while the 19-year Metonic cycle provides long-term stability, minor drift (1 day per 231 years) suggests expected drift in lunar based calendars. The calendar’s predictive model, based on astronomical ephemerides, could be further refined with real-time observational data or AI-driven predictions.</p>
       <p>The <a href="https://paulian-calendar.netlify.app/">Paulian Calendar</a> not only seeks to serve as a tool for observing Biblical festivals but also invites reflection on God’s prophetic timeline. By anchoring its framework in the crucifixion and resurrection, it encourages believers to look forward to Christ’s return, as prophesied in:</p>
       <div class="bible-verse">
         He will revive us after two days; He will raise us up on the third day, that we may live before Him.<br />
